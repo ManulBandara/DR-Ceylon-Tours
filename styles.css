@@ -528,7 +528,104 @@ body {
     gap: 1.5rem;
     margin-top: var(--space-sm);
 }
+/* TripAdvisor Review Banner */
+.tripadvisor-banner {
+    padding: var(--space-2xl) 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
 
+.tripadvisor-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+}
+
+.tripadvisor-logo__img {
+    height: 80px;
+    width: auto;
+}
+
+.tripadvisor-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.tripadvisor-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.tripadvisor-stars i {
+    font-size: 2rem;
+    color: #00AA6C;
+}
+
+.tripadvisor-score {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-left: 0.75rem;
+}
+
+.tripadvisor-reviews {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.btn-tripadvisor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    background: #00AA6C;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 170, 108, 0.3);
+    margin-top: 0.5rem;
+}
+
+.btn-tripadvisor:hover {
+    background: #008B5A;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 170, 108, 0.4);
+}
+
+@media (max-width: 768px) {
+    .tripadvisor-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .tripadvisor-logo__img {
+        height: 60px;
+    }
+
+    .tripadvisor-stars i {
+        font-size: 1.5rem;
+    }
+
+    .tripadvisor-score {
+        font-size: 2rem;
+    }
+}
 .badge-item {
     display: flex;
     align-items: center;
