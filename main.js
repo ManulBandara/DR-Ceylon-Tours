@@ -455,6 +455,108 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// Modern Hero Slider with Progress Bars
+const heroSlider = document.querySelector('.hero-slider');
+
+if (heroSlider) {
+  const slides = heroSlider.querySelectorAll('.hero-slide');
+  const progressBars = heroSlider.querySelectorAll('.progress-bar');
+  const prevBtn = heroSlider.querySelector('.slider-arrow--prev');
+  const nextBtn = heroSlider.querySelector('.slider-arrow--next');
+
+  let currentSlide = 0;
+  let isAutoPlay = true;
+  let slideInterval;
+  const slideDuration = 5000; // 5 seconds
+
+  function showSlide(index) {
+    // Remove active classes
+    slides.forEach(s => s.classList.remove('active'));
+    progressBars.forEach(p => p.classList.remove('active'));
+
+    // Add active classes
+    slides[index].classList.add('active');
+    progressBars[index].classList.add('active');
+
+    // Restart progress animation
+    const activeFill = progressBars[index].querySelector('.progress-fill');
+    activeFill.style.animation = 'none';
+    setTimeout(() => {
+      activeFill.style.animation = `progressFill ${slideDuration}ms linear`;
+    }, 10);
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function startAutoPlay() {
+    isAutoPlay = true;
+    slideInterval = setInterval(nextSlide, slideDuration);
+  }
+
+  function stopAutoPlay() {
+    isAutoPlay = false;
+    clearInterval(slideInterval);
+  }
+
+  // Navigation
+  prevBtn?.addEventListener('click', () => {
+    prevSlide();
+    stopAutoPlay();
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    nextSlide();
+    stopAutoPlay();
+  });
+
+  // Progress bar clicks
+  progressBars.forEach((bar, index) => {
+    bar.addEventListener('click', () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+      stopAutoPlay();
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+  });
+
+  // Pause on hover
+  heroSlider.addEventListener('mouseenter', stopAutoPlay);
+  heroSlider.addEventListener('mouseleave', () => {
+    if (isAutoPlay) startAutoPlay();
+  });
+
+  // Touch swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  heroSlider.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  heroSlider.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 50) nextSlide();
+    if (touchEndX - touchStartX > 50) prevSlide();
+  });
+
+  // Initialize
+  showSlide(0);
+  startAutoPlay();
+}
+
 // =========================================================
 // COOKIE CONSENT (Optional - Uncomment if needed)
 // =========================================================

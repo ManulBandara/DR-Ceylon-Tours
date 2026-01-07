@@ -189,13 +189,141 @@
                 </div>
             </div>
 
-            <div class="hero__media">
-                <img src="images/train.jpg"
-                    alt="Scenic Sri Lankan landscape with traditional temple and mountains" class="hero__image"
-                    width="1200" height="800" loading="eager">
-                <!-- Overlay gradient for better text readability -->
-                <div class="hero__overlay" aria-hidden="true"></div>
-            </div>
+            <section class="hero-slider">
+                <div class="slider-wrapper">
+            
+                    <!-- Slide 1 - With Video Background -->
+                    <div class="hero-slide active" data-slide="1">
+                        <div class="slide-media">
+                            <video autoplay muted loop playsinline class="slide-video">
+                                <source src="images/VIDEO.mp4" type="video/mp4">
+                            </video>
+                            <!-- Fallback image -->
+                            <img src="images/sigiriya.jpg" alt="Sigiriya Rock Fortress" class="slide-image">
+                            <div class="slide-overlay"></div>
+                        </div>
+                        <div class="slide-content container">
+                            <div class="slide-text">
+                                <span class="slide-label">UNESCO World Heritage</span>
+                                <h2 class="slide-title">Ancient Wonders Await</h2>
+                                <p class="slide-subtitle">Experience 1,500 years of history at Sigiriya Rock Fortress</p>
+                                <a href="#tours" class="btn-modern">Explore This Journey</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Slide 2 - Hill Country -->
+                    <div class="hero-slide" data-slide="2">
+                        <div class="slide-media">
+                            <img src="images/train-journey.jpg" alt="Scenic Train Journey" class="slide-image ken-burns">
+                            <div class="slide-overlay"></div>
+                        </div>
+                        <div class="slide-content container">
+                            <div class="slide-text">
+                                <span class="slide-label">World's Most Scenic</span>
+                                <h2 class="slide-title">Highland Tea Country</h2>
+                                <p class="slide-subtitle">Journey through emerald plantations by iconic blue train</p>
+                                <a href="#tours" class="btn-modern">Book This Experience</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Slide 3 - Safari -->
+                    <div class="hero-slide" data-slide="3">
+                        <div class="slide-media">
+                            <img src="images/yala-safari.jpg" alt="Yala Safari Adventure" class="slide-image ken-burns">
+                            <div class="slide-overlay"></div>
+                        </div>
+                        <div class="slide-content container">
+                            <div class="slide-text">
+                                <span class="slide-label">Wildlife Adventure</span>
+                                <h2 class="slide-title">Leopard Territory</h2>
+                                <p class="slide-subtitle">Highest leopard density in the world at Yala National Park</p>
+                                <a href="#tours" class="btn-modern">Start Safari</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Slide 4 - Beaches -->
+                    <div class="hero-slide" data-slide="4">
+                        <div class="slide-media">
+                            <img src="images/beach-sunset.jpg" alt="Paradise Beaches" class="slide-image ken-burns">
+                            <div class="slide-overlay"></div>
+                        </div>
+                        <div class="slide-content container">
+                            <div class="slide-text">
+                                <span class="slide-label">Tropical Paradise</span>
+                                <h2 class="slide-title">Golden Coast</h2>
+                                <p class="slide-subtitle">1,300km of pristine beaches and turquoise waters</p>
+                                <a href="#tours" class="btn-modern">Discover More</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Slide 5 - Cultural -->
+                    <div class="hero-slide" data-slide="5">
+                        <div class="slide-media">
+                            <img src="images/kandy-temple.jpg" alt="Kandy Temple" class="slide-image ken-burns">
+                            <div class="slide-overlay"></div>
+                        </div>
+                        <div class="slide-content container">
+                            <div class="slide-text">
+                                <span class="slide-label">Sacred City</span>
+                                <h2 class="slide-title">Cultural Heart</h2>
+                                <p class="slide-subtitle">Temple of the Tooth Relic and traditional Kandyan dances</p>
+                                <a href="#tours" class="btn-modern">Experience Culture</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <!-- Modern Progress Bar Navigation -->
+                <div class="slider-progress">
+                    <div class="progress-bar" data-slide="1">
+                        <div class="progress-fill"></div>
+                        <span class="progress-label">Sigiriya</span>
+                    </div>
+                    <div class="progress-bar" data-slide="2">
+                        <div class="progress-fill"></div>
+                        <span class="progress-label">Hill Country</span>
+                    </div>
+                    <div class="progress-bar" data-slide="3">
+                        <div class="progress-fill"></div>
+                        <span class="progress-label">Safari</span>
+                    </div>
+                    <div class="progress-bar" data-slide="4">
+                        <div class="progress-fill"></div>
+                        <span class="progress-label">Beaches</span>
+                    </div>
+                    <div class="progress-bar" data-slide="5">
+                        <div class="progress-fill"></div>
+                        <span class="progress-label">Kandy</span>
+                    </div>
+                </div>
+            
+                <!-- Minimalist Arrow Navigation -->
+                <button class="slider-arrow slider-arrow--prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+                <button class="slider-arrow slider-arrow--next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+            
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <span>Scroll to Explore</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M10 3v14M10 17l-4-4M10 17l4-4" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
+            
+            </section>
+
         </section>
 
         <!-- Stats Section with animation -->
@@ -358,7 +486,7 @@
                     <!-- Tour Card 2 -->
                     <article class="card">
                         <div class="card__image-wrapper">
-                            <img src="images/train.jpg"
+                            <img src="images/ella.jpg"
                                 alt="Scenic train journey through tea plantations" class="card__image" width="800"
                                 height="600" loading="lazy">
                             <span class="card__duration">3-4 Days</span>
@@ -608,33 +736,80 @@
         </section>
 
         <!-- About Section -->
-        <section class="section" id="about">
+        <section class="why-section">
             <div class="container">
-                <div class="about">
-                    <div class="about__content">
-                        <h2>Why Choose DR Ceylon Tours?</h2>
-                        <p>
-                            DR Ceylon Tours is a Sri Lanka-based taxi and tour company offering safe, comfortable, and
-                            licensed transport for international travelers.
-                        </p>
-                        <p>
-                            From airport transfers in Sri Lanka to multi-day private tours with a dedicated driver,
-                            every journey is planned with safety, comfort, and local expertise in mind.
-                        </p>
-                        <ul class="about__list">
-                            <li><strong>Licensed & Insured:</strong> SLTDA registered with full passenger insurance</li>
-                            <li><strong>24/7 Availability:</strong> Round-the-clock booking and support</li>
-                            <li><strong>Fixed Pricing:</strong> No hidden fees or surprise charges</li>
-                            <li><strong>Local Expertise:</strong> English-speaking drivers with deep local knowledge
-                            </li>
-                            <li><strong>Flexible Itineraries:</strong> Customize tours to match your interests</li>
-                            <li><strong>Clean Vehicles:</strong> Well-maintained, AC vehicles with WiFi</li>
-                        </ul>
-                    </div>
-                    <img src="images/lot2.jpg"
-                        alt="Professional driver with modern vehicle in Sri Lanka" class="about__image" width="800"
-                        height="600" loading="lazy">
+        
+                <!-- Section Header -->
+                <div class="why-header">
+                    <span class="why-badge">✦ Why Choose Us</span>
+                    <h2 class="why-title">
+                        Experience Sri Lanka<br>
+                        <span class="gradient-text">The Right Way</span>
+                    </h2>
+                    <p class="why-intro">
+                        Licensed, insured, and trusted by <strong>2,000+ travelers</strong> since 2015
+                    </p>
                 </div>
+        
+                <!-- Main Content - Image & Features Side by Side -->
+                <div class="why-layout">
+        
+                    <!-- Big Feature Image -->
+                    <div class="why-image-box">
+                        <img src="images/am.jpg" alt="Colombo at night" class="why-img">
+                        <!-- Floating Badge -->
+                        <div class="why-floating-badge">
+                            <span class="badge-emoji">⭐</span>
+                            <div>
+                                <strong>4.9/5 Rating</strong>
+                                <span>500+ Tours in 2025</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Simple Features -->
+                    <div class="why-features">
+        
+                        <div class="feature-card">
+                            <div class="feature-emoji">🛡️</div>
+                            <h3>Licensed & Insured</h3>
+                            <p>SLTDA registered with full passenger insurance</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-emoji">⏰</div>
+                            <h3>24/7 Available</h3>
+                            <p>Instant WhatsApp booking anytime, anywhere</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-emoji">💰</div>
+                            <h3>Fixed Pricing</h3>
+                            <p>No hidden fees or surprise charges ever</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-emoji">👨‍✈️</div>
+                            <h3>Local Experts</h3>
+                            <p>English-speaking drivers with deep knowledge</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-emoji">🗺️</div>
+                            <h3>Flexible Tours</h3>
+                            <p>Customize itineraries to match your style</p>
+                        </div>
+        
+                        <div class="feature-card">
+                            <div class="feature-emoji">🚗</div>
+                            <h3>Clean Vehicles</h3>
+                            <p>AC vehicles with WiFi and comfort</p>
+                        </div>
+        
+                    </div>
+        
+                </div>
+        
             </div>
         </section>
 
